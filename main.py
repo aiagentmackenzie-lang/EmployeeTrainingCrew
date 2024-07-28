@@ -4,7 +4,7 @@ from crewai import Agent, Task, Crew
 from langchain_openai import ChatOpenAI
 
 # Set API key for OpenAI
-os.environ["OPENAI_API_KEY"] = "sk-proj-Your-API-Key"
+os.environ["OPENAI_API_KEY"] = "Your-API-Key"
 
 # Load memory data from the single file
 memory_file_path = r'C:\Users\augus\EmployeeTrainingCrew\memory_file.text'
