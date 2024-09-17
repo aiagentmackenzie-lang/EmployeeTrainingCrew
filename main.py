@@ -31,7 +31,6 @@ web_researcher = Agent(
     backstory="A digital detective that specializes in gathering up-to-date information from the internet to support training needs.",
     llm=ChatOpenAI(model_name="gpt-3.5-turbo"),
     verbose=True,
-    memory=True,
     tools=[serper_tool]  # Add the SerperDevTool for web research
 )
 
