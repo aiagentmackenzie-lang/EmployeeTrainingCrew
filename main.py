@@ -4,14 +4,9 @@ from crewai import Agent, Task, Crew
 from langchain_openai import ChatOpenAI
 from crewai_tools import FileReadTool, WebsiteSearchTool, SerperDevTool  # Import the tools
 
-<<<<<<< HEAD
 # Set API key for OpenAI and Serper
 os.environ["OPENAI_API_KEY"] = "sk-gt1NTXK87AnCnuGW_kl7MmWgWDrvBOb_1c2Y13tZIXT3BlbkFJ_SUXB4rVV08ALM3cFJx7OqZvDlwH0Rv9aSrE5Q0tgA"
 os.environ["SERPER_API_KEY"] = "d2fd408fadf55b44b304f7f61bff135d477b40e9"
-=======
-# Set API key for OpenAI
-os.environ["OPENAI_API_KEY"] = "Your-API-Key"
->>>>>>> fd27f82d31db00fad84136e13d8657bd2fce42c9
 
 # Define tools
 file_read_tool = FileReadTool(file_path='memory.txt')  # Use FileReadTool to read from a memory file
