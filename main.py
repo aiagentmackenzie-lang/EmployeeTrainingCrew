@@ -18,7 +18,7 @@ knowledge_specialist = Agent(
     role='Senior Knowledge and Learning Specialist',
     goal='Deliver comprehensive and precise information directly to employees, leveraging Innovelle\'s extensive knowledge base.',
     backstory="An expert in Innovelle's policies, training resources, and history.",
-    llm=ChatOpenAI(model_name="gpt-3.5-turbo"),
+    llm=ChatOpenAI(model_name="gpt-4o-mini"),  # Updated to use gpt-4o-mini
     verbose=True,
     memory=True,
     tools=[file_read_tool]  # Add the file read tool
@@ -29,7 +29,7 @@ web_researcher = Agent(
     role='Web Researcher',
     goal='Find relevant online resources and articles related to the training topic {topic}.',
     backstory="A digital detective that specializes in gathering up-to-date information from the internet to support training needs.",
-    llm=ChatOpenAI(model_name="gpt-3.5-turbo"),
+    llm=ChatOpenAI(model_name="gpt-4o-mini"),  # Updated to use gpt-4o-mini
     verbose=True,
     tools=[serper_tool]  # Add the SerperDevTool for web research
 )
@@ -39,7 +39,7 @@ training_developer = Agent(
     role='Lead Instructional Designer and Training Specialist',
     goal='Create and enhance training materials based on specific employee queries and Innovelle standards.',
     backstory="A skilled instructional designer specializing in creating detailed training programs.",
-    llm=ChatOpenAI(model_name="gpt-3.5-turbo"),
+    llm=ChatOpenAI(model_name="gpt-4o-mini"),  # Updated to use gpt-4o-mini
     verbose=True,
     memory=True,
     tools=[website_search_tool]  # Add the website search tool
