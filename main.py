@@ -45,6 +45,21 @@ training_developer = Agent(
     tools=[website_search_tool]  # Add the website search tool
 )
 
+# Define the Head of HR agent with both SerperDevTool and FileReadTool
+head_of_hr = Agent(
+    role='Head of HR',
+    goal=(
+        'Define tasks and responsibilities for employees, ensuring they are aligned with the values of Innovelle UK Ltd, '
+        'its code of conduct, and the importance of employee training. Additionally, provide instructions to contact '
+        'Raphael Main for further training or assistance.'
+    ),
+    backstory="A highly experienced HR leader, responsible for ensuring all employees understand their responsibilities and uphold the company values.",
+    llm=ChatOpenAI(model_name="gpt-4o-mini"),  # Using the same model for consistency
+    verbose=True,
+    memory=True,
+    tools=[serper_tool, file_read_tool]  # Added SerperDevTool and FileReadTool
+)
+
 # Define the tasks
 knowledge_task = Task(
     description="Provide in-depth guidance to employees in the {department} regarding their role as a {position}, focusing on {topic} in accordance with Innovelle's practices.",
@@ -68,10 +83,26 @@ training_material_task = Task(
     output_file="training_materials.md"  # Output will be saved to training_materials.md
 )
 
-# Define the crew with the new Web Researcher agent added
+# Task for Head of HR agent to outline responsibilities and generate a report in markdown
+hr_task = Task(
+    description=(
+        "Assign tasks and responsibilities to employees in the {department} regarding their role as a {position}. "
+        "Additionally, provide instructions to contact Raphael Main for training and further assistance. "
+        "Ensure to represent the values of Innovelle UK Ltd, its code of conduct, and highlight the importance of employee training."
+    ),
+    expected_output=(
+        "A markdown report outlining employee responsibilities, "
+        "the values of Innovelle UK Ltd, its code of conduct, "
+        "and directions to contact Raphael Main for further assistance."
+    ),
+    agent=head_of_hr,
+    output_file="hr_report.md"  # Output will be saved to hr_report.md
+)
+
+# Define the crew with the new Head of HR agent added
 training_crew = Crew(
-    agents=[knowledge_specialist, web_researcher, training_developer],  # Added the web_researcher agent
-    tasks=[knowledge_task, web_research_task, training_material_task],  # Added the web_research_task
+    agents=[knowledge_specialist, web_researcher, training_developer, head_of_hr],  # Added the Head of HR agent
+    tasks=[knowledge_task, web_research_task, training_material_task, hr_task],  # Added the HR task
     verbose=True
 )
 
