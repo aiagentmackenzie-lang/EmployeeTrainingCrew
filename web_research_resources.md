@@ -1,43 +1,43 @@
 Here is a list of online resources and articles about CrewAI agent training:
 
-1. **CrewAI: A Guide With Examples of Multi AI Agent Systems**
-   - Link: [DataCamp](https://www.datacamp.com/tutorial/crew-ai)
-   - Snippet: CrewAI is a platform that enables developers to build and deploy automated workflows using multiple AI agents that collaborate to perform complex tasks.
+1. **CrewAI: A Guide With Examples of Multi AI Agent Systems**  
+   [DataCamp](https://www.datacamp.com/tutorial/crew-ai)  
+   *CrewAI is a platform that enables developers to build and deploy automated workflows using multiple AI agents that collaborate to perform complex tasks.*
 
-2. **Crew AI Crash Course (Step by Step)**
-   - Link: [Medium](https://medium.com/@tarekeesa7/crew-ai-crash-course-step-by-step-c801f37220a5)
-   - Snippet: This tutorial introduces you to the basics of CrewAI and shows you how to create a simple crew using a sequential process.
+2. **Crew AI Crash Course (Step by Step)**  
+   [Medium](https://medium.com/@tarekeesa7/crew-ai-crash-course-step-by-step-c801f37220a5)  
+   *CrewAI is a tool that allows users to create their own teams of autonomous agents, each specializing in various tasks.*
 
-3. **CrewAI Multi-Agent System for Writing Article from YouTube Videos**
-   - Link: [Analytics Vidhya](https://www.analyticsvidhya.com/blog/2024/10/crewai-multi-agent-system/)
-   - Snippet: Learn to build a CrewAI multi-agent system for writing articles from YouTube video by leveraging AI agents.
+3. **Tutorial: Introduction to CrewAI**  
+   [GitHub](https://github.com/alejandro-ao/crewai-crash-course)  
+   *This project provides a comprehensive guide to understanding and implementing CrewAI's capabilities for designing intelligent systems.*
 
-4. **Building Multi-Agent LLM Systems with CrewAI: A Step-by-Step Guide**
-   - Link: [Medium](https://medium.com/@sridevi.gogusetty/building-multi-agent-llm-systems-with-crewai-a-step-by-step-guide-2cd33f219da3)
-   - Snippet: Introduction To Multi-Agent. Multi AI Agent Systems with CrewAI are transforming the way we approach complex decision-making.
+4. **How I made an entire Team with CrewAI to manage my YouTube**  
+   [Reddit](https://www.reddit.com/r/ArtificialInteligence/comments/1cagrqi/how_i_made_an_entire_team_with_crewai_to_manage/)  
+   *This article discusses the automation of tasks like competitor analysis using CrewAI for YouTube management.*
 
-5. **CrewAI Crash Course Repository**
-   - Link: [GitHub](https://github.com/alejandro-ao/crewai-crash-course)
-   - Snippet: This project is a comprehensive guide to understanding and implementing Crew AI's capabilities to design intelligent systems that can perform tasks.
+5. **Multi AI Agent Systems with CrewAI**  
+   [DeepLearning.AI](https://www.deeplearning.ai/short-courses/multi-ai-agent-systems-with-crewai/)  
+   *Learn key principles of designing effective AI agents and organizing them to perform complex, multi-step tasks.*
 
-6. **How I Made an Entire Team with CrewAI to Manage My YouTube Channel**
-   - Link: [Reddit](https://www.reddit.com/r/ArtificialInteligence/comments/1cagrqi/how_i_made_an_entire_team_with_crewai_to_manage/)
-   - Snippet: The idea was to use CrewAI to automate tasks like competitor YouTube channel analysis and identify trending topics.
+6. **How AI Agents with CrewAI Enable Effective Edtech Solutions**  
+   [Analytics Vidhya](https://www.analyticsvidhya.com/blog/2024/10/ai-agents-with-crewai/)  
+   *This article explores how AI agents collaborate to deliver personalized course recommendations in the Edtech sector.*
 
-7. **Crew AI: A New Era in AI-Driven Workplace Solutions**
-   - Link: [Simplilearn](https://www.simplilearn.com/tutorials/generative-ai-tutorial/crew-ai)
-   - Snippet: In this article, we will explore what Crew AI is, look at its key features, highlight its benefits, and discuss how it is changing the workplace.
+7. **System and User prompt in CrewAI**  
+   [DeepLearning.AI Community](https://community.deeplearning.ai/t/system-and-user-prompt-in-crewai/630396)  
+   *Discussion on crafting prompts in CrewAI based on agent properties like role, goal, and backstory.*
 
-8. **System and User Prompt in CrewAI**
-   - Link: [DeepLearning.AI Community](https://community.deeplearning.ai/t/system-and-user-prompt-in-crewai/630396)
-   - Snippet: How are prompts crafted in CrewAI? Are they based on the Agent's three properties named role, goal, and backstory?
+8. **Crewai — AI Agent**  
+   [Medium](https://medium.com/@danushidk507/crewai-ai-agent-9a1684064094)  
+   *An overview of CrewAI as a framework for orchestrating collaborative AI agents with structured task management.*
 
-9. **Multi Agents and Function Calling with Watsonx.ai**
-   - Link: [Niklas Heidloff](https://heidloff.net/article/crewai-agents-function-calling-watsonx.ai/)
-   - Snippet: This post describes how to use multiple CrewAI agents, custom Python functions, and LLM models on Watsonx.ai.
+9. **Human in the loop with CrewAI**  
+   [GitHub](https://github.com/joaomdmoura/crewAI/issues/258)  
+   *Exploration of structuring an interview process where one agent interacts with a human and another summarizes the responses.*
 
-10. **What is CrewAI?**
-    - Link: [IBM](https://www.ibm.com/think/topics/crew-ai)
-    - Snippet: CrewAI is an open-source multi-agent orchestration framework created by João Moura. This Python-based framework leverages artificial intelligence (AI).
+10. **What is CrewAI?**  
+    [IBM](https://www.ibm.com/think/topics/crew-ai)  
+    *An introduction to CrewAI, an open-source multiagent orchestration framework created by João Moura, leveraging AI technologies.*
 
-These resources will provide valuable insights and guidance for CrewAI agent training.
+These resources will provide comprehensive insights and guidance for effectively training CrewAI agents.
