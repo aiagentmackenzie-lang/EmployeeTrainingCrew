@@ -15,6 +15,7 @@ EmployeeTrainingCrew/
 ├── final_knowledge_response.txt  # Output: Knowledge specialist's guidance
 ├── final_training_materials.txt  # Output: Detailed training materials
 └── README.md                    # This README file
+
 Requirements
 Python: 3.7 or higher
 
