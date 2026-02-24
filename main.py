@@ -4,9 +4,18 @@ from crewai import Agent, Task, Crew
 from langchain_openai import ChatOpenAI
 from crewai_tools import FileReadTool, WebsiteSearchTool, SerperDevTool  # Import the tools
 
-# Set API key for OpenAI and Serper
-os.environ["OPENAI_API_KEY"] = "sk-gt1NTXK87AnCnuGW_kl7MmWgWDrvBOb_1c2Y13tZIXT3BlbkFJ_SUXB4rVV08ALM3cFJx7OqZvDlwH0Rv9aSrE5Q0tgA"
-os.environ["SERPER_API_KEY"] = "d2fd408fadf55b44b304f7f61bff135d477b40e9"
+# Load API keys from environment variables
+# Set these in your environment before running:
+# export OPENAI_API_KEY="your-key-here"
+# export SERPER_API_KEY="your-key-here"
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY", "")
+os.environ["SERPER_API_KEY"] = os.getenv("SERPER_API_KEY", "")
+
+# Verify API keys are set
+if not os.environ["OPENAI_API_KEY"]:
+    raise ValueError("OPENAI_API_KEY environment variable not set")
+if not os.environ["SERPER_API_KEY"]:
+    raise ValueError("SERPER_API_KEY environment variable not set")
 
 # Define tools
 file_read_tool = FileReadTool(file_path='memory.txt')  # Use FileReadTool to read from a memory file
@@ -16,8 +25,8 @@ serper_tool = SerperDevTool()  # Use SerperDevTool for web-based research
 # Define the Knowledge Specialist agent with the FileReadTool
 knowledge_specialist = Agent(
     role='Senior Knowledge and Learning Specialist',
-    goal='Deliver comprehensive and precise information directly to employees, leveraging Innovelle\'s extensive knowledge base.',
-    backstory="An expert in Innovelle's policies, training resources, and history.",
+    goal='Deliver comprehensive and precise information directly to employees, leveraging the company\'s extensive knowledge base.',
+    backstory="An expert in company policies, training resources, and history.",
     llm=ChatOpenAI(model_name="gpt-4o-mini"),  # Updated to use gpt-4o-mini
     verbose=True,
     memory=True,
@@ -37,8 +46,8 @@ web_researcher = Agent(
 # Define the Training Developer agent with the WebsiteSearchTool
 training_developer = Agent(
     role='Lead Instructional Designer and Training Specialist',
-    goal='Create and enhance training materials based on specific employee queries and Innovelle standards.',
-    backstory="A skilled instructional designer specializing in creating detailed training programs.",
+    goal='Create and enhance training materials based on specific employee queries and company standards.',
+    backstory="A skilled instructional designer specializing in creating detailed training programs aligned with company standards.",
     llm=ChatOpenAI(model_name="gpt-4o-mini"),  # Updated to use gpt-4o-mini
     verbose=True,
     memory=True,
@@ -49,8 +58,8 @@ training_developer = Agent(
 head_of_hr = Agent(
     role='Head of HR',
     goal=(
-        'Define tasks and responsibilities for employees, ensuring they are aligned with the values of Innovelle UK Ltd, '
-        'its code of conduct, and the importance of employee training. Additionally, provide instructions to contact '
+        'Define tasks and responsibilities for employees, ensuring they are aligned with the company\'s '
+        'values, code of conduct, and the importance of employee training. Additionally, provide instructions to contact '
         'Raphael Main for further training or assistance.'
     ),
     backstory="A highly experienced HR leader, responsible for ensuring all employees understand their responsibilities and uphold the company values.",
@@ -92,7 +101,7 @@ hr_task = Task(
     ),
     expected_output=(
         "A markdown report outlining employee responsibilities, "
-        "the values of Innovelle UK Ltd, its code of conduct, "
+        "the company values, code of conduct, "
         "and directions to contact Raphael Main for further assistance."
     ),
     agent=head_of_hr,
