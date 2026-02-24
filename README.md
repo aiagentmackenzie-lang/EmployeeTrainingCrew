@@ -1,82 +1,72 @@
-Employee Training Crew - Innovelle Onboarding
+# Employee Training Crew - Onboarding
 
-Overview
+## Overview
+This project implements an automated system using CrewAI for the onboarding and training of Web Developers in the Software department. The system utilizes a combination of agents, including a **Senior Knowledge and Learning Specialist** and a **Lead Instructional Designer and Training Specialist**, to deliver comprehensive training materials tailored to professional standards and practices.
 
-This project implements an automated system using CrewAI for the onboarding and training of Web Developers in the Software department at Innovelle. The system utilizes a combination of agents, including a Senior Knowledge and Learning Specialist and a Lead Instructional Designer and Training Specialist, to deliver comprehensive training and onboarding materials tailored to Innovelle's standards and practices.
+---
 
-Project Structure
+## Project Structure
 
+```text
 EmployeeTrainingCrew/
-├── env/                    # Virtual environment directory
-├── memory_file.text        # Memory data file containing relevant training and onboarding information
-├── main.py                 # Main script to execute the training crew process
-├── final_knowledge_response.txt  # Output file for knowledge specialist's guidance
-├── final_training_materials.txt  # Output file for training developer's materials
-├── README.md               # This README file
-
+├── env/                         # Virtual environment directory
+├── memory_file.text             # Memory data file containing training information
+├── main.py                      # Main script to execute the training crew process
+├── final_knowledge_response.txt  # Output: Knowledge specialist's guidance
+├── final_training_materials.txt  # Output: Detailed training materials
+└── README.md                    # This README file
 Requirements
+Python: 3.7 or higher
 
-Python 3.7 or higher
-Required Python packages (listed in requirements.txt or managed within a virtual environment)
+Packages: CrewAI, OpenAI, and dependencies listed in requirements.txt
+
 Setup Instructions
+1. Create a Virtual Environment
+It is recommended to use a virtual environment to manage dependencies:
 
-Create a Virtual Environment:
-
-It is recommended to create a virtual environment to manage dependencies for this project. You can create one using the following commands:
-
-
+Bash
 python -m venv env
 source env/bin/activate   # On Windows, use `env\Scripts\activate`
+2. Install Required Packages
 
-Install Required Packages:
-
-After activating the virtual environment, install the required packages:
-
-
+Bash
 pip install -r requirements.txt
+3. Set Environment Variables
+Set your OpenAI API key to enable the language model interactions:
 
-Set Environment Variables:
-
-Make sure to set your OpenAI API key as an environment variable before running the script. This key is necessary for the language model interactions.
-
-
+Bash
 export OPENAI_API_KEY="your_openai_api_key"   # On Windows, use `set OPENAI_API_KEY=your_openai_api_key`
-Prepare Memory Data File:
-
-Ensure that memory_file.text contains all the necessary information for the training and onboarding process. This file serves as the primary data source for the agents.
+4. Prepare Memory Data File
+Ensure that memory_file.text contains all the necessary information for the onboarding process. This file serves as the primary data source for the agents.
 
 Usage Instructions
+Run the Main Script
 
-Run the Main Script:
+Execute the script to initiate the agents and process the tasks:
 
-Execute the main script to start the training crew process. The script will load memory data, initiate the agents, and process the tasks.
-
+Bash
 python main.py
-Outputs:
+Outputs
 
-The script will generate two output files containing the results of the training process:
+The script will generate two primary output files:
 
-final_knowledge_response.txt: Contains the comprehensive guidance provided by the Senior Knowledge and Learning Specialist.
-final_training_materials.txt: Contains the detailed training materials created by the Lead Instructional Designer and Training Specialist.
+final_knowledge_response.txt: Contains comprehensive guidance from the Senior Knowledge and Learning Specialist.
+
+final_training_materials.txt: Contains the structured training modules created by the Instructional Designer.
+
 Error Handling
+Memory File Not Found: The script will exit if memory_file.text is missing.
 
-Memory File Not Found:
+Empty Memory Data: If the source file contains no data, the process will terminate with an error message.
 
-If the memory file (memory_file.text) is not found, the script will exit with an error message.
-Empty Memory Data:
-
-If the memory file is empty, the script will exit with an error message.
-
-Task Output Errors:
-
-If there are errors in accessing task outputs, they will be logged, and the script will continue to provide as much information as possible.
+Task Output Errors: Any issues accessing specific task results will be logged while the script attempts to complete remaining processes.
 
 Contributions
-
-Contributions to this project are welcome. Please ensure that any contributions align with Innovelle's training and onboarding standards.
+Contributions to this project are welcome. Please ensure that any additions align with modern web development training standards.
 
 License
 This project is licensed under the MIT License.
 
 Contact Information
-For further information or assistance, please contact the project maintainer at email@example.com.
+For further information or assistance, please contact the project maintainer at:
+aiagent.mackenzie@gmail.com
