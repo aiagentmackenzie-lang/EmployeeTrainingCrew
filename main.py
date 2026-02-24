@@ -71,7 +71,7 @@ head_of_hr = Agent(
 
 # Define the tasks
 knowledge_task = Task(
-    description="Provide in-depth guidance to employees in the {department} regarding their role as a {position}, focusing on {topic} in accordance with Innovelle's practices.",
+    description="Provide in-depth guidance to employees in the {department} regarding their role as a {position}, focusing on {topic} in accordance with company practices.",
     expected_output="A detailed response providing actionable insights on {topic}, tailored to the employee’s department and role.",
     agent=knowledge_specialist
 )
@@ -87,7 +87,7 @@ web_research_task = Task(
 # Training material task output will be saved to training_materials.md
 training_material_task = Task(
     description="Create comprehensive training materials for employees in the {department} regarding their role as a {position}, emphasizing {topic}.",
-    expected_output="Engaging and practical training documents tailored to Innovelle's best practices and standards.",
+    expected_output="Engaging and practical training documents tailored to company best practices and standards.",
     agent=training_developer,
     output_file="training_materials.md"  # Output will be saved to training_materials.md
 )
@@ -97,7 +97,7 @@ hr_task = Task(
     description=(
         "Assign tasks and responsibilities to employees in the {department} regarding their role as a {position}. "
         "Additionally, provide instructions to contact Raphael Main for training and further assistance. "
-        "Ensure to represent the values of Innovelle UK Ltd, its code of conduct, and highlight the importance of employee training."
+        "Ensure to represent the company values, code of conduct, and highlight the importance of employee training."
     ),
     expected_output=(
         "A markdown report outlining employee responsibilities, "
